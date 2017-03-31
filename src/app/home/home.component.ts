@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Food } from '../food.model';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -11,7 +12,11 @@ export class HomeComponent implements OnInit {
     new Food("Tacos", "Burrito Axteca chicken", 300, 2),
     new Food("Tortilla Chips", "With salsa", 350, 3),
   ];
-  constructor() { }
+
+  goToDetailPage(clickedFood: Food) {
+    this.router.navigate(['foods', clickedFood.id]);
+  }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
