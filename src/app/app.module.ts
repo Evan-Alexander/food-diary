@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { routing } from './app.routing';
 import { FoodComponent } from './food/food.component';
+import { FoodDetailComponent } from './food-detail/food-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    FoodComponent
+    FoodComponent,
+    FoodDetailComponent
   ],
   imports: [
     BrowserModule,
