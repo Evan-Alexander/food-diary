@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Food } from '../food.model';
 import { Router } from '@angular/router';
 @Component({
@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent {
   foods: Food[] = [
     new Food("Cliff Bar", "Peanut Butter", 250, 1),
     new Food("Tacos", "Burrito Axteca chicken", 300, 2),
@@ -17,8 +17,5 @@ export class HomeComponent implements OnInit {
     this.router.navigate(['foods', clickedFood.id]);
   }
   constructor(private router: Router) { }
-
-  ngOnInit() {
-  }
 
 }
