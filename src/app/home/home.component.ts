@@ -25,11 +25,11 @@ export class HomeComponent implements OnInit {
        this.foods = this.foodService.getFoods();
      }
 
-  ngOnInit(){
+  ngOnInit(): void{
     this.getFoods();
   }
 
-  addFood(newFood: Food) {
+  addFood(newFood) {
     this.foods.push(newFood);
   }
 
@@ -39,11 +39,10 @@ export class HomeComponent implements OnInit {
 
   finishedEditing() {
     this.selectedFood = null;
-    //save edits to firebase
   }
 
-  goToDetailPage(clickedFood: Food) {
-    this.router.navigate(['food', clickedFood.id]);
+  goToDetailPage(clickedFood) {
+    this.router.navigate(['food', clickedFood.$key]);
   }
 
 
