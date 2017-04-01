@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Food } from '../food.model';
+// import { Food } from '../food.model';
 import { Router } from '@angular/router';
 import { FoodService } from '../food.service';
 import { AngularFire, FirebaseListObservable } from 'angularfire2';
@@ -13,7 +13,7 @@ import { AngularFire, FirebaseListObservable } from 'angularfire2';
 })
 export class HomeComponent implements OnInit {
   foods: FirebaseListObservable <any[]>;
-  selectedFood = null;
+  // selectedFood = null;
 
 
   constructor(
@@ -29,11 +29,11 @@ export class HomeComponent implements OnInit {
     this.getFoods();
   }
 
-  addFood(newFood: Food) {
+  addFood(newFood) {
     this.foods.push(newFood);
   }
 
-  goToDetailPage(clickedFood: Food) {
+  goToDetailPage(clickedFood) {
     this.router.navigate(['food', clickedFood.$key]);
   }
 

@@ -1,5 +1,5 @@
 import { Component, OnInit, Output, Input, EventEmitter } from '@angular/core';
-import { Food } from '../food.model';
+// import { Food } from '../food.model';
 import { FoodService } from '../food.service';
 
 @Component({
@@ -9,7 +9,7 @@ import { FoodService } from '../food.service';
   providers: [FoodService]
 })
 export class EditFoodComponent implements OnInit {
-  @Input() editingFood: Food;
+  @Input() editingFood;
   @Output() doneButtonClickedSender = new EventEmitter();
 
 
