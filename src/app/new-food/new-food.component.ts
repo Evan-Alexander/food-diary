@@ -1,5 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { Food } from '../food.model';
+// import { Food } from '../food.model';
 
 @Component({
   selector: 'app-new-food',
@@ -13,7 +13,7 @@ export class NewFoodComponent implements OnInit {
   ngOnInit() {
   }
   addFood(name:string, description:string, calories:number) {
-    var newFood: Food = {name: name, description:description, calories:calories, id: null, $key: null};
+    var newFood = {name: name, description:description, calories:calories, id: null, $key: null};
     this.newFoodSender.emit(newFood);
   }
 }

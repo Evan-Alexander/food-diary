@@ -14,7 +14,7 @@ import { Router } from '@angular/router';
 })
 
 export class FoodDetailComponent implements OnInit {
-  foodId: string = null;
+  foodId: string;
   foodToDisplay;
   editingFood: Food = null;
 
@@ -26,11 +26,12 @@ export class FoodDetailComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-   this.route.params.forEach((urlParameters) => {
-     this.foodId = urlParameters['id'];
-   });
-   this.foodToDisplay = this.foodService.getFoodById(this.foodId);
+  this.route.params.forEach((urlParameters) => {
+    this.foodId = urlParameters['id'];
+  });
+  this.foodToDisplay = this.foodService.getFoodById(this.foodId).subscribe(result=>this.foodToDisplay = result);
   }
+  
   editFood() {
    this.editingFood = this.foodToDisplay;
    console.log(this.foodToDisplay);

@@ -3,6 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FoodService } from '../food.service';
 import { AngularFire, FirebaseListObservable } from 'angularfire2';
+import { FilterPipe } from './../filter.pipe';
+
 
 
 @Component({
@@ -13,8 +15,7 @@ import { AngularFire, FirebaseListObservable } from 'angularfire2';
 })
 export class HomeComponent implements OnInit {
   foods: FirebaseListObservable <any[]>;
-  // selectedFood = null;
-
+  number;
 
   constructor(
     private router: Router,
