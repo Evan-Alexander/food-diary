@@ -1,3 +1,17 @@
-<p>
-  new-food works!
-</p>
+<div>
+  <form>
+    <div class="form-group">
+      <label>Name</label>
+      <input type="text" #newName placeholder="name">
+    </div>
+    <div class="form-group">
+      <label>Description</label>
+      <input type="text" #newDescription  placeholder="description">
+    </div>
+    <div class="form-group">
+      <label>Calories</label>
+      <input type="text" #newCalories  placeholder="calories">
+    </div>
+    <button (click)="addFood(newName.value, newDescription.value, newCalories.value)">Save</button>
+  </form>
+</div>
