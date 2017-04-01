@@ -1,20 +1,19 @@
 <div id="edit-food">
   <div *ngIf="childSelectedFood">
-    <h3>{{childSelectedFood.name}}</h3>
+    <h3>{{selectedFood.name}}</h3>
     <hr>
     <h3>Edit Selection</h3>
     <div class="form-group">
       <label>Enter Food name:</label>
-      <input class="form-control" [(ngModel)]="childSelectedFood.name">
+      <input class="form-control" [(ngModel)]="selectedFood.name">
     </div>
     <div class="form-group">
       <label>Enter Food Description:</label>
-      <input class="form-control" [(ngModel)]="childSelectedFood.description">
+      <input class="form-control" [(ngModel)]="selectedFood.description">
     </div>
     <div class="form-group">
       <label>Enter Calories:</label>
-      <input class="form-control" [(ngModel)]="childSelectedFood.calories">
+      <input class="form-control" [(ngModel)]="selectedFood.calories">
     </div>
-    <button (click)="doneButtonClicked()">Done</button>
-  </div>
+    <button (click)="updateFood(selectedFood)">Update
 </div>
