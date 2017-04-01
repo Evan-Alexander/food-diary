@@ -27,12 +27,21 @@ export class HomeComponent implements OnInit {
     this.getFoods();
   }
 
-  // goToDetailPage(clickedFood: Food) {
-  //   this.router.navigate(['foods', clickedFood.id]);
-  // }
-
   addFood(newFood: Food) {
     this.foods.push(newFood);
+  }
+
+  editFood(clickedFood) {
+    this.selectedFood = clickedFood;
+  }
+
+  finishedEditing() {
+    this.selectedFood = null;
+    //save edits to firebase
+  }
+
+  goToDetailPage(clickedFood: Food) {
+    this.router.navigate(['food', clickedFood.id]);
   }
 
 

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, Input, EventEmitter } from '@angular/core';
+import { Food } from '../food.model';
 
 @Component({
   selector: 'app-edit-food',
@@ -6,7 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./edit-food.component.css']
 })
 export class EditFoodComponent implements OnInit {
+  @Input() childSelectedFood: Food;
+  @Output() doneButtonClickedSender = new EventEmitter();
 
+  doneButtonClicked() {
+    this.doneButtonClickedSender.emit();
+  }
   constructor() { }
 
   ngOnInit() {
