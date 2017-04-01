@@ -12,6 +12,8 @@ import { FoodService } from './food.service';
 import { FoodDetailComponent } from './food-detail/food-detail.component';
 import { NewFoodComponent } from './new-food/new-food.component';
 import { EditFoodComponent } from './edit-food/edit-food.component';
+import { FilterPipe } from './filter.pipe';
+
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -26,7 +28,8 @@ export const firebaseConfig = {
     HomeComponent,
     FoodDetailComponent,
     NewFoodComponent,
-    EditFoodComponent
+    EditFoodComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
