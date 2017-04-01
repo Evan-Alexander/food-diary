@@ -19,12 +19,20 @@ export class HomeComponent implements OnInit {
     private foodService: FoodService
   ) { }
 
-  ngOnInit(){
-    this.foods = this.foodService.getFoods();
+  getFoods():void {
+    this.foodService.getFoods().then(foods => this.foods = foods)
   }
 
-  goToDetailPage(clickedFood: Food) {
-    this.router.navigate(['foods', clickedFood.id]);
+  ngOnInit(){
+    this.getFoods();
+  }
+
+  // goToDetailPage(clickedFood: Food) {
+  //   this.router.navigate(['foods', clickedFood.id]);
+  // }
+
+  addFood(newFood: Food) {
+    this.foods.push(newFood);
   }
 
 
