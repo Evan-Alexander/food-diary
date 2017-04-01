@@ -20,10 +20,7 @@ export class FoodDetailComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.route.params.forEach((urlParameters) => {
-      this.foodId = parseInt(urlParameters['id']);
-    });
-    this.foodToDisplay = this.foodService.getFoodById(this.foodId);
+  
   }
 
 }
