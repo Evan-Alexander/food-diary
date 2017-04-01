@@ -11,6 +11,7 @@ import { FoodService } from '../food.service';
 })
 export class HomeComponent implements OnInit {
   foods: Food[];
+  selectedFood = null;
 
 
   constructor(
@@ -25,5 +26,6 @@ export class HomeComponent implements OnInit {
   goToDetailPage(clickedFood: Food) {
     this.router.navigate(['foods', clickedFood.id]);
   }
+
 
 }
