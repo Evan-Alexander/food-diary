@@ -9,7 +9,7 @@ import { FoodService } from '../food.service';
   providers: [FoodService]
 })
 export class EditFoodComponent implements OnInit {
-  @Input() selectedFood: Food;
+  @Input() editingFood: Food;
   @Output() doneButtonClickedSender = new EventEmitter();
 
 

@@ -4,6 +4,7 @@ import { Location } from '@angular/common';
 import { Food } from '../food.model';
 import { FoodService } from '../food.service';
 import { FirebaseObjectObservable } from 'angularfire2';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-food-detail',
@@ -15,8 +16,10 @@ import { FirebaseObjectObservable } from 'angularfire2';
 export class FoodDetailComponent implements OnInit {
   foodId: string = null;
   foodToDisplay;
-  
+  editingFood: Food = null;
+
   constructor(
+    private router: Router,
     private route: ActivatedRoute,
     private location: Location,
     private foodService: FoodService
@@ -28,5 +31,18 @@ export class FoodDetailComponent implements OnInit {
    });
    this.foodToDisplay = this.foodService.getFoodById(this.foodId);
   }
+  editFood() {
+   this.editingFood = this.foodToDisplay;
+   console.log(this.foodToDisplay);
+  }
 
+  finishedEditing() {
+   this.editingFood = null;
+  }
+
+  deleteFood(food){
+   if(confirm("Are you sure you want to delete this food?")){
+     this.foodService.deleteFood(food);
+    }
+  }
 }

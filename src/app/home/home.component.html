@@ -1,13 +1,10 @@
 <h2>Keep Track of what you eat</h2>
 <app-new-food (newFoodSender)="addFood($event)"></app-new-food>
-<div *ngFor="let food of foods">
+<div *ngFor="let food of foods | async" (click)="goToDetailPage(food)">
   <div class="well">
-    <h3 (click)="goToDetailPage(food)"><a href="#">{{food.name}}</a></h3>
+    <h4>{{food.name}}</h4>
     <h4>{{food.description}}</h4>
     <h4>{{food.calories}}</h4>
-    <button (click)="editFood(food)">Edit Food</button>
-    <button (click)="deleteFood(food)">Delete</button>
 
   </div>
-  <app-edit-foods [SelectedFood]="selectedFood" (doneButtonClickedSender)="finishedEditing()"></app-edit-foods>
 </div>

@@ -29,27 +29,12 @@ export class HomeComponent implements OnInit {
     this.getFoods();
   }
 
-  addFood(newFood) {
+  addFood(newFood: Food) {
     this.foods.push(newFood);
   }
 
-  editFood(clickedFood) {
-    this.selectedFood = clickedFood;
-  }
-
-  finishedEditing() {
-    this.selectedFood = null;
-  }
-
-  deleteFood(food){
-    if(confirm("Are you sure you want to delete this food?")){
-      this.foodService.deleteFood(food);
-    }
-  }
-
-  goToDetailPage(clickedFood) {
+  goToDetailPage(clickedFood: Food) {
     this.router.navigate(['food', clickedFood.$key]);
   }
-
 
 }
