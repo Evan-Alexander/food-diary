@@ -1,6 +1,6 @@
 <h2>Keep Track of what you eat</h2>
-<app-new-food></app-new-food>
-<div *ngFor="let food of foods" (click)="goToDetailPage(food)" >
+<app-new-food (newFoodSender)="addFood($event)"></app-new-food>
+<div *ngFor="let food of foods">
   <div class="well">
     <h3><em>{{food.name}}</em></h3>
     <h4>{{food.description}}</h4>
