@@ -1,6 +1,7 @@
-<h3>Edit Food Details</h3>
-<div>
-  <h3>{{foodToDisplay.name}}</h3>
-  <h6>{{foodToDisplay.description}}</h6>
-  <h4>{{foodToDisplay.calories}}</h4>
+<div class="well">
+  <h3>{{(foodToDisplay | async)?.name}}</h3>
+  <h4>{{(foodToDisplay | async)?.description}}</h4>
+  <h4>{{(foodToDisplay | async)?.calories}}</h4>
+  <button (click)="editFood(foodToDisplay)">Edit food</button>
+  <button (click)="deleteFood(foodToDisplay)">Delete</button>
 </div>

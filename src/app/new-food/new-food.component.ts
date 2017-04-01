@@ -10,10 +10,10 @@ export class NewFoodComponent implements OnInit {
   @Output() newFoodSender = new EventEmitter();
     constructor() { }
 
-    ngOnInit() {
-    }
-    addFood(name:string, description:string, calories:number) {
-      var newFood: Food = {id: Math.floor(Math.random() * 100), name: name, description:description, calories:calories};
-      this.newFoodSender.emit(newFood);
-    }
+  ngOnInit() {
+  }
+  addFood(name:string, description:string, calories:number) {
+    var newFood: Food = {name: name, description:description, calories:calories, id: null, $key: null};
+    this.newFoodSender.emit(newFood);
+  }
 }

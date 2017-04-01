@@ -9,12 +9,10 @@ import { FoodService } from '../food.service';
   providers: [FoodService]
 })
 export class EditFoodComponent implements OnInit {
-  @Input() selectedFood;
+  @Input() selectedFood: Food;
   @Output() doneButtonClickedSender = new EventEmitter();
 
-  // doneButtonClicked() {
-  //   this.doneButtonClickedSender.emit();
-  // }
+
   constructor(private foodService: FoodService) { }
 
   ngOnInit() {
