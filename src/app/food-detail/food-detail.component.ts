@@ -11,7 +11,8 @@ import { FoodService } from '../food.service';
   providers: [FoodService]
 })
 export class FoodDetailComponent implements OnInit {
-  foodId: number = null;
+  foodId: number;
+  foodToDisplay: Food;
   constructor(
     private route: ActivatedRoute,
     private location: Location,
@@ -22,6 +23,7 @@ export class FoodDetailComponent implements OnInit {
     this.route.params.forEach((urlParameters) => {
       this.foodId = parseInt(urlParameters['id']);
     });
+    this.foodToDisplay = this.foodService.getFoodById(this.foodId);
   }
 
 }
