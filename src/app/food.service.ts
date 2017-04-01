@@ -15,4 +15,15 @@ export class FoodService {
   constructor(private angularFire: AngularFire) {
     this.foods = angularFire.database.list('foods');
   }
+  getFoodById(foodId: string) {
+   return this.angularFire.database.object('/foods/' + foodId);
+ }
+
+ updateFood(localUpdatedFood){
+   var foodEntryInFirebase = this.getFoodById(localUpdatedFood.$key);
+   foodEntryInFirebase.update({
+     header: localUpdatedFood.header,
+     description: localUpdatedFood.description
+   });
+ }
 }
