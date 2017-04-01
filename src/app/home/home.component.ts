@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Food } from '../food.model';
 import { Router } from '@angular/router';
 import { FoodService } from '../food.service';
+import { AngularFire, FirebaseListObservable } from 'angularfire2';
+
 
 @Component({
   selector: 'app-home',
@@ -10,7 +12,7 @@ import { FoodService } from '../food.service';
   providers: [FoodService]
 })
 export class HomeComponent implements OnInit {
-  foods: Food[];
+  foods: FirebaseListObservable <any[]>;
   selectedFood = null;
 
 
@@ -19,9 +21,9 @@ export class HomeComponent implements OnInit {
     private foodService: FoodService
   ) { }
 
-  getFoods():void {
-    this.foodService.getFoods().then(foods => this.foods = foods)
-  }
+  getFoods(): void {
+       this.foods = this.foodService.getFoods();
+     }
 
   ngOnInit(){
     this.getFoods();
