@@ -41,6 +41,12 @@ export class HomeComponent implements OnInit {
     this.selectedFood = null;
   }
 
+  deleteFood(food){
+    if(confirm("Are you sure you want to delete this food?")){
+      this.foodService.deleteFood(food);
+    }
+  }
+
   goToDetailPage(clickedFood) {
     this.router.navigate(['food', clickedFood.$key]);
   }

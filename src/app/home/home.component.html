@@ -6,6 +6,8 @@
     <h4>{{food.description}}</h4>
     <h4>{{food.calories}}</h4>
     <button (click)="editFood(food)">Edit Food</button>
+    <button (click)="deleteFood(food)">Delete</button>
+
   </div>
   <app-edit-foods [SelectedFood]="selectedFood" (doneButtonClickedSender)="finishedEditing()"></app-edit-foods>
 </div>

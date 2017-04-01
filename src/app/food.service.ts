@@ -26,4 +26,9 @@ export class FoodService {
      description: localUpdatedFood.description
    });
  }
+
+ deleteFood(food){
+   var foodEntryInFirebase = this.getFoodById(food.$key);
+   foodEntryInFirebase.remove();
+ }
 }
