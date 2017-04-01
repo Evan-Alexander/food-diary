@@ -4,18 +4,12 @@ import { FOODS } from './mock-foods';
 
 @Injectable()
 export class FoodService {
-
+  getFoods(): Promise<Food[]> {
+    return Promise.resolve(FOODS);
+  }
+  getFood(id: number): Promise<Food> {
+    return this.getFoods().then(foods => foods.find(food => food.id === id));
+  }
   constructor() { }
 
-  getFoods() {
-    return FOODS;
-  }
-
-  getFoodById(foodId: number) {
-    for (var i = 0; i <= FOODS.length -1; i++) {
-      if (FOODS[i].id === foodId) {
-        return FOODS[i];
-      }
-    }
-  }
 }
