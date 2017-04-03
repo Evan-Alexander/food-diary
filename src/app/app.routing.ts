@@ -8,7 +8,7 @@ const appRoutes: Routes = [
     component: HomeComponent
   },
   {
-    path: '',
+    path: 'foods/:id',
     component: EditFoodsComponent
   }
 
