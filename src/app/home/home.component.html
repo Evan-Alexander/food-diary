@@ -1,6 +1,8 @@
 
+<div class="well">
+  <app-new-food></app-new-food>
+</div>
 <h3>Here's what you've consumed:</h3>
-
 <div *ngFor="let food of foods | async" (click)="goToEditPage(food)" class="well">
     <h4>{{food.name}}</h4>
     <h5>{{food.description}}</h5>
