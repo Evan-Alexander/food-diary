@@ -1,3 +1,3 @@
 export class Food {
-  constructor (public name: string, public description: string, public calories: string, public $key: any) { }
+  constructor (public name: string, public description: string, public calories: string) { }
 }
