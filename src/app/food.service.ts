@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { FOODS } from './mock-foods';
 import { Food } from './food.model';
+import { FOODS } from './mock-foods';
 
 @Injectable()
 
