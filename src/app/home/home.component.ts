@@ -21,7 +21,7 @@ export class HomeComponent implements OnInit {
   }
 
   goToEditPage(clickedFood: Food) {
-    this.router.navigate(['foods', clickedFood.id]);
+    this.router.navigate(['foods', clickedFood.$key]);
   }
 
 }
