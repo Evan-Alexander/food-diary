@@ -2,16 +2,22 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
 import { Food } from '../food.model';
+import { FoodService } from '../food.service';
 
 @Component({
   selector: 'app-edit-foods',
   templateUrl: './edit-foods.component.html',
-  styleUrls: ['./edit-foods.component.css']
+  styleUrls: ['./edit-foods.component.css'],
+  providers: [FoodService]
 })
 export class EditFoodsComponent implements OnInit {
   foodId: number = null;
 
-  constructor(private route: ActivatedRoute, private location: Location) { }
+  constructor(
+    private route: ActivatedRoute,
+    private location: Location,
+    private foodService: FoodService
+  ) { }
 
   ngOnInit() {
     this.route.params.forEach((urlPatameters) => {
