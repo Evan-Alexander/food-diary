@@ -1,3 +1,8 @@
-<p>
-  home works!
-</p>
+
+<h3>Here's what you've consumed:</h3>
+
+<div *ngFor="let food of foods" class="well">
+    <h4>{{food.name}}</h4>
+    <h5>{{food.description}}</h5>
+    <h4>{{food.calories}}</h4>
+</div>
