@@ -7,12 +7,6 @@ import { masterFirebaseConfig } from './api-keys';
 import { routing } from './app.routing';
 
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { FoodService } from './food.service';
-import { FoodDetailComponent } from './food-detail/food-detail.component';
-import { NewFoodComponent } from './new-food/new-food.component';
-import { EditFoodComponent } from './edit-food/edit-food.component';
-import { FilterPipe } from './filter.pipe';
 
 
 export const firebaseConfig = {
@@ -24,12 +18,7 @@ export const firebaseConfig = {
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HomeComponent,
-    FoodDetailComponent,
-    NewFoodComponent,
-    EditFoodComponent,
-    FilterPipe
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +27,7 @@ export const firebaseConfig = {
     AngularFireModule.initializeApp(firebaseConfig),
     routing
   ],
-  providers: [FoodService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
