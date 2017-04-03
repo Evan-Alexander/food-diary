@@ -1,4 +1,4 @@
-export const masterFirebaseConfig = {
+export var masterFirebaseConfig = {
   apiKey: "AIzaSyA8-0CWE3N1VguVDACPx9VC7ZTKZ5qgeek",
   authDomain: "food-logger-1151f.firebaseapp.com",
   databaseURL: "https://food-logger-1151f.firebaseio.com",
