@@ -1,7 +1,7 @@
 
 <h3>Here's what you've consumed:</h3>
 
-<div *ngFor="let food of foods" (click)="goToEditPage(food)" class="well">
+<div *ngFor="let food of foods | async" (click)="goToEditPage(food)" class="well">
     <h4>{{food.name}}</h4>
     <h5>{{food.description}}</h5>
     <h4>{{food.calories}}</h4>
