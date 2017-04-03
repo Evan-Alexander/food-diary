@@ -1,0 +1,22 @@
+{ "foods": [{
+    "name": "Cliff Bar",
+    "description": "peanut butter crunch",
+    "calories": "250",
+    "id": "1"
+    }, {
+    "name": "Coffee",
+    "description": "with a little cream and sugar",
+    "calories": "150",
+    "id": "2"
+    }, {
+    "name": "Chicken tacos",
+    "description": "Burrito Azteca with hot sauce",
+    "calories": "500",
+    "id": "3"
+    }, {
+    "name": "Hop Valley IPA",
+    "description": "Had two.",
+    "calories": "550",
+    "id": "4"
+  }]
+}
