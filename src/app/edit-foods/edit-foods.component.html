@@ -1,5 +1,5 @@
 <div class="well">
-  <h3>{{foodToDisplay.name}}</h3>
-  <h4>{{foodToDisplay.description}}</h4>
-  <h4>Calories: {{foodToDisplay.calories}}</h4>
+  <h3>{{(foodToDisplay | async)?.name}}</h3>
+  <h4>{{(foodToDisplay| async)?.description}}</h4>
+  <h4>Calories: {{(foodToDisplay| async)?.calories}}</h4>
 </div>
