@@ -8,6 +8,7 @@ import { routing } from './app.routing';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
+import { EditFoodsComponent } from './edit-foods/edit-foods.component';
 
 
 // export const firebaseConfig = {
@@ -20,7 +21,8 @@ import { HomeComponent } from './home/home.component';
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    EditFoodsComponent
   ],
   imports: [
     BrowserModule,
