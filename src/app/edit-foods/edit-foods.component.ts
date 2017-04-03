@@ -4,6 +4,7 @@ import { Location } from '@angular/common';
 import { Food } from '../food.model';
 import { FoodService } from '../food.service';
 import { FirebaseObjectObservable } from 'angularfire2';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-edit-foods',
@@ -11,9 +12,9 @@ import { FirebaseObjectObservable } from 'angularfire2';
   styleUrls: ['./edit-foods.component.css'],
   providers: [FoodService]
 })
-export class EditFoodsComponent implements OnInit {
+export class EditFoodsComponent implements OnInit{
   foodId: string;
-  foodToDisplay: Food;
+  foodToDisplay;
 
   constructor(
     private route: ActivatedRoute,
@@ -22,10 +23,10 @@ export class EditFoodsComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.route.params.forEach((urlPatameters) => {
-      this.foodId = urlPatameters['id'];
-    });
-    this.foodToDisplay = this.foodService.getFoodById(this.foodId)
+    this.route.params.forEach((urlParameters) => {
+     this.foodId = urlParameters['id'];
+   });
+   this.foodToDisplay = this.foodService.getFoodById(this.foodId);
   }
 
 }
