@@ -3,6 +3,7 @@ import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
 import { Food } from '../food.model';
 import { FoodService } from '../food.service';
+import { FirebaseObjectObservable } from 'angularfire2';
 
 @Component({
   selector: 'app-edit-foods',
@@ -11,7 +12,7 @@ import { FoodService } from '../food.service';
   providers: [FoodService]
 })
 export class EditFoodsComponent implements OnInit {
-  foodId: number;
+  foodId: string;
   foodToDisplay: Food;
 
   constructor(
@@ -22,7 +23,7 @@ export class EditFoodsComponent implements OnInit {
 
   ngOnInit() {
     this.route.params.forEach((urlPatameters) => {
-      this.foodId = parseInt(urlPatameters['id']);
+      this.foodId = urlPatameters['id'];
     });
     this.foodToDisplay = this.foodService.getFoodById(this.foodId)
   }
