@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { EditFoodsComponent } from './edit-foods/edit-foods.component';
 import { NewFoodComponent } from './new-food/new-food.component';
+import { UpdateFoodsComponent } from './update-foods/update-foods.component';
 
 
 export const firebaseConfig = {
@@ -24,7 +25,8 @@ export const firebaseConfig = {
     AppComponent,
     HomeComponent,
     EditFoodsComponent,
-    NewFoodComponent
+    NewFoodComponent,
+    UpdateFoodsComponent
   ],
   imports: [
     BrowserModule,
