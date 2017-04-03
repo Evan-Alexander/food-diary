@@ -12,6 +12,7 @@ import { AngularFire, FirebaseListObservable } from 'angularfire2';
 })
 export class HomeComponent implements OnInit {
   foods: FirebaseListObservable<any[]>;
+  currentRoute: string = this.router.url;
 
   constructor(private router: Router, private foodService: FoodService) { }
 
@@ -20,7 +21,7 @@ export class HomeComponent implements OnInit {
     this.foods = this.foodService.getFoods();
   }
 
-  goToEditPage(clickedFood: Food) {
+  goToEditPage(clickedFood) {
     this.router.navigate(['foods', clickedFood.$key]);
   }
 
