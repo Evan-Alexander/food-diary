@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Food Diary';
+  title = 'Welcome to the wonderful world of calorie counting!';
 }

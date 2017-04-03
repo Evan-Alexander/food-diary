@@ -6,5 +6,4 @@
 <div *ngFor="let food of foods | async" (click)="goToEditPage(food)" class="well">
     <h4>{{food.name}}</h4>
     <h5>{{food.description}}</h5>
-    <h4>{{food.calories}}</h4>
 </div>
