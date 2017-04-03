@@ -19,7 +19,7 @@ export class FoodService {
     this.foods.push(newFood);
   }
 
-  getFoodById(foodId: number) {
+  getFoodById(foodId: string) {
     return this.angularFire.database.object('foods/' + foodId);
   }
 
