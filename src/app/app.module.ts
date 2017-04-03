@@ -9,6 +9,7 @@ import { routing } from './app.routing';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { EditFoodsComponent } from './edit-foods/edit-foods.component';
+import { NewFoodComponent } from './new-food/new-food.component';
 
 
 export const firebaseConfig = {
@@ -22,7 +23,8 @@ export const firebaseConfig = {
   declarations: [
     AppComponent,
     HomeComponent,
-    EditFoodsComponent
+    EditFoodsComponent,
+    NewFoodComponent
   ],
   imports: [
     BrowserModule,
