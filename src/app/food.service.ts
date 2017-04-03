@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { Food } from './food.model';
-import { FOODS } from './mock-foods';
 import { AngularFire, FirebaseListObservable } from 'angularfire2';
 
 @Injectable()
@@ -16,12 +15,12 @@ export class FoodService {
     return this.foods;
   }
 
+  addFood(newFood: Food) {
+    this.foods.push(newFood);
+  }
+
   getFoodById(foodId: number) {
-    for (var i = 0; i <= FOODS.length - 1; i++) {
-      if (FOODS[i].id === foodId) {
-        return FOODS[i];
-      }
-    }
+    return this.angularFire.database.object('foods/' + foodId);
   }
 
 }
