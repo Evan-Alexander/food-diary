@@ -7,6 +7,7 @@ import { masterFirebaseConfig } from './api-keys';
 import { routing } from './app.routing';
 
 import { AppComponent } from './app.component';
+import { HomeComponent } from './home/home.component';
 
 
 export const firebaseConfig = {
@@ -18,7 +19,8 @@ export const firebaseConfig = {
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
