@@ -2,6 +2,8 @@ import { ModuleWithProviders }  from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component'
 import { EditFoodsComponent } from './edit-foods/edit-foods.component';
+import { NewFoodComponent } from './new-food/new-food.component';
+
 const appRoutes: Routes = [
   {
     path: '',
@@ -10,6 +12,10 @@ const appRoutes: Routes = [
   {
     path: 'foods/:id',
     component: EditFoodsComponent
+  },
+  {
+    path: 'new-food',
+    component: NewFoodComponent
   }
 
 ];
