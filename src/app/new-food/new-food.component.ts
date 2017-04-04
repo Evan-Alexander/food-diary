@@ -27,6 +27,7 @@ export class NewFoodComponent implements OnInit {
     } else {
     var newFood: Food = new Food(name, description, calories);
     this.foodService.addFood(newFood);
+    alert("Entry Submitted!");
     }
   }
 
