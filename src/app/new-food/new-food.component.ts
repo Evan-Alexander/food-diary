@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFire, FirebaseObjectObservable } from 'angularfire2';
 import { FoodService } from '../food.service'
 import { Food } from '../food.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-new-food',
@@ -12,7 +13,10 @@ import { Food } from '../food.model';
 export class NewFoodComponent implements OnInit {
   foods: FirebaseObjectObservable<any[]>;
 
-  constructor(private foodService: FoodService) { }
+  constructor(
+    private foodService: FoodService,
+    private router: Router,
+    private angularFire: AngularFire) { }
 
   ngOnInit() {
   }

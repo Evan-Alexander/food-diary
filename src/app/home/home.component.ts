@@ -25,4 +25,8 @@ export class HomeComponent implements OnInit {
     this.router.navigate(['foods', clickedFood.$key]);
   }
 
+  redirect() {
+    this.router.navigate(['/new-food']);
+  }
+
 }

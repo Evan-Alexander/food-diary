@@ -1,7 +1,5 @@
 
-<div class="well">
-  <app-new-food></app-new-food>
-</div>
+<button (click)="redirect()">Add new Entry</button>
 <h3>Here's what you've consumed:</h3>
 <div *ngFor="let food of foods | async" class="well">
     <h4 (click)="goToEditPage(food)">{{food.name}}</h4>
