@@ -8,7 +8,7 @@ import { FoodService } from '../food.service';
   providers: [FoodService]
 })
 export class UpdateFoodsComponent implements OnInit {
-  @Input() selectedFood;
+  // @Input() selectedFood;
 
   constructor(private foodService: FoodService) { }
 
