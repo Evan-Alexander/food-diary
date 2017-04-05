@@ -17,15 +17,23 @@ body {
   margin-bottom: 5%;
 }
 
-#food-tiles {
+#food-tiles,
+div#food-detail {
   width: 70%;
+}
+
+div#food-detail button {
+  color: #000;
 }
 
 #food-tiles:hover {
   cursor: pointer;
 }
 
-.well {
-  background-color: rgba(0, 0, 0, 0.7);
-  color: #000;
+div.well {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  box-shadow: 1px -1px 2px, inset 1px 1px 2px;
+  border: none;
+
 }
