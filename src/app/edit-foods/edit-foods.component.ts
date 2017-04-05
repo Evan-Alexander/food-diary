@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
 import { Food } from '../food.model';
@@ -15,11 +15,13 @@ import { Router } from '@angular/router';
 export class EditFoodsComponent implements OnInit{
   foodId: string;
   foodToDisplay;
+  editingFood: Food = null;
 
   constructor(
     private route: ActivatedRoute,
     private location: Location,
-    private foodService: FoodService
+    private foodService: FoodService,
+    private router: Router
   ) { }
 
   ngOnInit() {
@@ -28,5 +30,13 @@ export class EditFoodsComponent implements OnInit{
    });
    this.foodToDisplay = this.foodService.getFoodById(this.foodId);
   }
+  editFood() {
+   this.editingFood = this.foodToDisplay;
+   console.log(this.foodToDisplay);
+  }
+
+   finishedEditing() {
+     this.editingFood = null;
+   }
 
 }

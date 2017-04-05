@@ -1,12 +1,17 @@
-<h4>Edit Food Item</h4>
+<div *ngIf="editingFood" id="edit-food-form">
 
-<label>New Food Name:</label>
-<input class="form-control" [(ngModel)]="selectedFood.name">
-<br>
+  <h4>Edit Food Item</h4>
 
-<label>New Food Description:</label>
-<input class="form-control" [(ngModel)]="selectedFood.description">
-<br>
+  <label>Food Name:</label>
+  <input class="form-control" [(ngModel)]="editingFood.name">
+  <br>
 
-<label>New Food Calories:</label>
-<input class="form-control" [(ngModel)]="selectedFood.calories">
+  <label>Food Description:</label>
+  <input class="form-control" [(ngModel)]="editingFood.description">
+  <br>
+
+  <label>Food Calories:</label>
+  <input class="form-control" [(ngModel)]="editingFood.calories">
+
+  <button class="btn btn-default" (click)="updateFood(editingFood)">Update</button>
+</div>

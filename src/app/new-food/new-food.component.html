@@ -9,13 +9,13 @@
   <div>
     <label>Food Description:</label>
     <br>
-    <input class="form-control" #newDescription required="">
+    <input class="form-control" #newDescription>
   </div>
 
   <div>
     <label>Calories:</label>
     <br>
-    <input class="form-control" #newCalories required="">
+    <input class="form-control" #newCalories>
   </div>
   <br>
   <button (click)="redirect();" class="btn btn-default" (click)="submitForm(newName.value, newDescription.value, newCalories.value); newName.value=''; newDescription.value=''; newCalories.value=''">Add</button>

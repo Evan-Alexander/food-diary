@@ -1,6 +1,9 @@
-<div class="well">
+<div id="food-detail" class="well">
   <h3>{{(foodToDisplay | async)?.name}}</h3>
   <h4>{{(foodToDisplay | async)?.description}}</h4>
   <h4>Calories: {{(foodToDisplay | async)?.calories}}</h4>
   <br>
+  <button (click)="editFood()">Edit Food</button>
+  <app-update-foods [editingFood]="editingFood" (doneButtonClickedSender)="finishedEditing()"></app-update-foods>
+
 </div>

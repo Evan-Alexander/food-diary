@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import { AngularFire, FirebaseObjectObservable } from 'angularfire2';
 import { FoodService } from '../food.service'
 import { Food } from '../food.model';

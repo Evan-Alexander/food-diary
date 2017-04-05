@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component'
 import { EditFoodsComponent } from './edit-foods/edit-foods.component';
 import { NewFoodComponent } from './new-food/new-food.component';
+import { UpdateFoodsComponent } from './update-foods/update-foods.component';
 
 const appRoutes: Routes = [
   {
@@ -16,6 +17,10 @@ const appRoutes: Routes = [
   {
     path: 'new-food',
     component: NewFoodComponent
+  },
+  {
+    path: 'update-foods',
+    component: UpdateFoodsComponent
   }
 
 ];
