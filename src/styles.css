@@ -1,6 +1,31 @@
+body {
+  background-image: url('./assets/background.jpg');
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  padding: 5%;
+}
+
+.container {
+  color: #fff;
+}
+
 #add-food-form {
   width: 50%;
   margin: 0 auto;
   margin-top: 5%;
   margin-bottom: 5%;
+}
+
+#food-tiles {
+  width: 70%;
+}
+
+#food-tiles:hover {
+  cursor: pointer;
+}
+
+.well {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #000;
 }
