@@ -19,7 +19,12 @@ body {
 
 #food-tiles,
 div#food-detail {
-  width: 70%;
+  width: 65%;
+}
+
+#food-tiles > *,
+div#food-detail > *{
+margin-left: 15%;
 }
 
 div#food-detail button {
@@ -35,5 +40,4 @@ div.well {
   color: #fff;
   box-shadow: 1px -1px 2px, inset 1px 1px 2px;
   border: none;
-
 }
