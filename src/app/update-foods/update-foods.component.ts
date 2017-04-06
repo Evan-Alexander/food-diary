@@ -1,8 +1,6 @@
-import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { FoodService } from '../food.service';
-import { Router } from '@angular/router';
 import { Food } from '../food.model';
-import { AngularFire, FirebaseListObservable } from 'angularfire2';
 
 @Component({
   selector: 'app-update-foods',
@@ -11,20 +9,15 @@ import { AngularFire, FirebaseListObservable } from 'angularfire2';
   providers: [FoodService]
 })
 export class UpdateFoodsComponent implements OnInit {
-  @Input() editingFood;
-  @Output() doneButtonClickedSender = new EventEmitter();
+  @Input() selectedFood;
 
-  foodToDisplay;
   constructor(
-    private foodService: FoodService,
-    private router: Router) { }
+    private foodService: FoodService) { }
 
   ngOnInit() {
   }
-  updateFood(selectedFood){
-      this.foodService.updateFood(selectedFood);
-      this.doneButtonClickedSender.emit();
-    }
 
-
+  beginUpdatingFood(foodToUpdate) {
+    this.foodService.updateFood(foodToUpdate);
+  }
 }
