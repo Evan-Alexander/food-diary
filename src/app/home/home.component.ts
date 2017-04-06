@@ -3,6 +3,7 @@ import { Food } from '../food.model';
 import { Router } from '@angular/router';
 import { FoodService } from '../food.service';
 import { AngularFire, FirebaseListObservable } from 'angularfire2';
+import {Pipe, PipeTransform} from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -25,5 +26,11 @@ export class HomeComponent implements OnInit {
 
   goToEditPage(clickedFood) {
     this.router.navigate(['foods', clickedFood.$key]);
+  }
+
+  calorieFilter: string = "allFoods";
+
+  onChange(optionFromMenu) {
+    this.calorieFilter = optionFromMenu;
   }
 }

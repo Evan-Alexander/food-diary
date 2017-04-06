@@ -12,6 +12,7 @@ import { FoodDetailComponent } from './food-detail/food-detail.component';
 import { AngularFireModule } from 'angularfire2';
 import { masterFirebaseConfig } from './api-keys';
 import { EditFoodComponent } from './edit-food/edit-food.component';
+import { FilterPipe } from './filter.pipe';
 
 
 export const firebaseConfig = {
@@ -27,7 +28,8 @@ export const firebaseConfig = {
     HomeComponent,
     NewFoodComponent,
     FoodDetailComponent,
-    EditFoodComponent
+    EditFoodComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
