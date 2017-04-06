@@ -4,7 +4,7 @@ import { Location } from '@angular/common';
 import { Food } from '../food.model';
 import { FoodService } from '../food.service';
 import { FirebaseObjectObservable } from 'angularfire2';
-import { Router } from '@angular/router';
+import { AngularFire, FirebaseListObservable } from 'angularfire2';
 
 @Component({
   selector: 'app-edit-foods',
@@ -23,10 +23,13 @@ export class EditFoodsComponent implements OnInit{
   ) { }
 
   ngOnInit() {
-    this.route.params.forEach((dataLastEmittedFromObserver) => {
+    this.route.params.forEach((urlParametersArray) => {
+      this.foodId = urlParametersArray['id'];
+    });
+    this.foodService.getFoodById(this.foodId).subscribe(dataLastEmittedFromObserver) => {
      this.foodToDisplay = new Food(dataLastEmittedFromObserver.name,
                                   dataLastEmittedFromObserver. description,
                                   dataLastEmittedFromObserver.calories);
-   });
+    })
   }
 }
