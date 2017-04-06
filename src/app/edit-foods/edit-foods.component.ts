@@ -3,8 +3,8 @@ import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
 import { Food } from '../food.model';
 import { FoodService } from '../food.service';
-import { FirebaseObjectObservable } from 'angularfire2';
 import { AngularFire, FirebaseListObservable } from 'angularfire2';
+import { FirebaseObjectObservable } from 'angularfire2';
 
 @Component({
   selector: 'app-edit-foods',
