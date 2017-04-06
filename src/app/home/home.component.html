@@ -1,7 +1,7 @@
 
 <button class="btn btn-default" (click)="redirect()">Add New Entry</button>
 <h3>Here's what you've consumed:</h3>
-<div id="food-tiles" *ngFor="let food of foods | async" (click)="goToEditPage(food)" class="well">
-    <h4>{{food.name}}</h4>
-    <h5>{{food.description}}</h5>
+<div id="food-tiles" *ngFor="let food of foods"  class="well">
+    <h4 (click)="goToEditPage(food)">{{food?.name}}</h4>
+    <h5>{{food?.description}}</h5>
 </div>

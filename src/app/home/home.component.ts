@@ -17,8 +17,11 @@ export class HomeComponent implements OnInit {
 
 
   ngOnInit() {
-    this.foods = this.foodService.getFoods();
-  }
+   this.foodService.getFoods().subscribe(dataLastEmittedFromObserver => {
+     this.foods = dataLastEmittedFromObserver;
+     console.log(this.foods);
+   })
+ }
 
   goToEditPage(clickedFood) {
     this.router.navigate(['foods', clickedFood.$key]);
