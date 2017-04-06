@@ -1,8 +1,7 @@
-import { Component, OnInit, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AngularFire, FirebaseObjectObservable } from 'angularfire2';
 import { FoodService } from '../food.service'
 import { Food } from '../food.model';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-new-food',
@@ -11,12 +10,9 @@ import { Router } from '@angular/router';
   providers: [FoodService]
 })
 export class NewFoodComponent implements OnInit {
-  foods: FirebaseObjectObservable<any[]>;
 
   constructor(
     private foodService: FoodService,
-    private router: Router,
-    private angularFire: AngularFire
     ) { }
 
   ngOnInit() {
@@ -31,9 +27,4 @@ export class NewFoodComponent implements OnInit {
       alert("Entry Submitted!");
     }
   }
-
-  redirect() {
-    this.router.navigate(['/']);
-  }
-
 }
