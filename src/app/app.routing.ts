@@ -1,9 +1,9 @@
 import { ModuleWithProviders }  from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component'
-import { EditFoodsComponent } from './edit-foods/edit-foods.component';
 import { NewFoodComponent } from './new-food/new-food.component';
-import { UpdateFoodsComponent } from './update-foods/update-foods.component';
+import { FoodDetailComponent } from './food-detail/food-detail.component';
+import { EditFoodComponent } from './edit-food/edit-food.component';
 
 const appRoutes: Routes = [
   {
@@ -11,17 +11,16 @@ const appRoutes: Routes = [
     component: HomeComponent
   },
   {
-    path: 'foods/:id',
-    component: EditFoodsComponent
-  },
-  {
     path: 'new-food',
     component: NewFoodComponent
   },
   {
-    path: 'update-foods',
-    component: UpdateFoodsComponent
+    path: 'foods/:id',
+    component: FoodDetailComponent
+  },
+  {
+    path: 'edit-food',
+    component: EditFoodComponent
   }
-
 ];
 export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);

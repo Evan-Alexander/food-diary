@@ -1,0 +1,17 @@
+<h4>Edit Food</h4>
+
+<label>New Food Name:</label>
+<input class="form-control" [(ngModel)]="selectedFood.name">
+<br>
+
+<label>New Food Description:</label>
+<input class="form-control" [(ngModel)]="selectedFood.description">
+<br>
+
+<label>New Food Calories:</label>
+<input class="form-control" [(ngModel)]="selectedFood.calories">
+<br>
+
+<br>
+<button class="btn btn-default" (click)="beginUpdatingFood(selectedFood)">Update</button>
+<br>

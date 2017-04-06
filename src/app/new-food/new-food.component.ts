@@ -12,8 +12,7 @@ import { Food } from '../food.model';
 export class NewFoodComponent implements OnInit {
 
   constructor(
-    private foodService: FoodService,
-    ) { }
+    private foodService: FoodService) { }
 
   ngOnInit() {
   }

@@ -6,11 +6,12 @@ import { routing } from './app.routing';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { EditFoodsComponent } from './edit-foods/edit-foods.component';
 import { NewFoodComponent } from './new-food/new-food.component';
-import { UpdateFoodsComponent } from './update-foods/update-foods.component';
+import { FoodDetailComponent } from './food-detail/food-detail.component';
+
 import { AngularFireModule } from 'angularfire2';
 import { masterFirebaseConfig } from './api-keys';
+import { EditFoodComponent } from './edit-food/edit-food.component';
 
 
 export const firebaseConfig = {
@@ -24,9 +25,9 @@ export const firebaseConfig = {
   declarations: [
     AppComponent,
     HomeComponent,
-    EditFoodsComponent,
     NewFoodComponent,
-    UpdateFoodsComponent
+    FoodDetailComponent,
+    EditFoodComponent
   ],
   imports: [
     BrowserModule,

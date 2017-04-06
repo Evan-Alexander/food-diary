@@ -20,16 +20,10 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
    this.foodService.getFoods().subscribe(dataLastEmittedFromObserver => {
      this.foods = dataLastEmittedFromObserver;
-     console.log(this.foods);
    })
  }
 
   goToEditPage(clickedFood) {
     this.router.navigate(['foods', clickedFood.$key]);
   }
-
-  redirect() {
-    this.router.navigate(['/new-food']);
-  }
-
 }

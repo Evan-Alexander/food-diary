@@ -4,8 +4,8 @@
   <h4 (click)="goToEditPage(food)">{{food?.name}}</h4>
   <h5>{{food?.description}}</h5>
   <div *ngIf="currentRoute === '/new-food'">
-    {{food?.description}}
+    {{food?.calories}}
     <hr>
-    <app-update-foods [selectedFood]="food"></app-update-foods>
+    <app-edit-food [selectedFood]="food"></app-edit-food>
   </div>
 </div>
