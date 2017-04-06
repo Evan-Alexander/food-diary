@@ -24,12 +24,12 @@ export class EditFoodsComponent implements OnInit{
 
   ngOnInit() {
     this.route.params.forEach((urlParametersArray) => {
-      this.foodId = urlParametersArray['id'];
-    });
-    this.foodService.getFoodById(this.foodId).subscribe(dataLastEmittedFromObserver) => {
-     this.foodToDisplay = new Food(dataLastEmittedFromObserver.name,
-                                  dataLastEmittedFromObserver. description,
-                                  dataLastEmittedFromObserver.calories);
-    })
+     this.foodId = urlParametersArray['id'];
+   });
+   this.foodService.getFoodById(this.foodId).subscribe(dataLastEmittedFromObserver => {
+     this.foodToDisplay = new Food(dataLastEmittedFromObserver.title,
+                                    dataLastEmittedFromObserver.artist,
+                                    dataLastEmittedFromObserver.description)
+   })
   }
 }
