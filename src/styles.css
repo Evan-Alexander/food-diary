@@ -10,13 +10,17 @@ body {
   color: #fff;
 }
 
-#add-food-form {
+#new-food-form {
   width: 50%;
   margin: 0 auto;
   margin-top: 5%;
   margin-bottom: 5%;
-  border: solid red 4px;
-  
+}
+
+#new-f-label {
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: -2%;
 }
 
 #food-tiles,
@@ -38,7 +42,21 @@ div.well {
   box-shadow: 1px -1px 2px, inset 1px 1px 2px;
   border: none;
 }
+
 div.well input,
 div.well button {
   color: #000;
+}
+
+#food-detail {
+  border: solid red 2px;
+}
+
+div#food-tiles,
+#food-tile-label {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  text-align: center;
 }

@@ -1,4 +1,4 @@
-<h3>Add New Food Entry</h3>
+<h3 id="new-f-label">Add New Food Entry</h3>
 <div id="new-food-form" class="well">
   <div>
     <label>Food Name:</label>
@@ -21,6 +21,6 @@
   <button class="btn btn-default" (click)="submitForm(newName.value, newDescription.value, newCalories.value); newName.value='';
   newDescription.value=''; newCalories.value=''">Add</button>
 </div>
-<div class="well">
+<div id="home-div-within-new-food">
   <app-home></app-home>
 </div>
