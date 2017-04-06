@@ -14,29 +14,19 @@ import { Router } from '@angular/router';
 })
 export class EditFoodsComponent implements OnInit{
   foodId: string;
-  foodToDisplay;
-  editingFood: Food = null;
+  foodToDisplay: Food;
 
   constructor(
     private route: ActivatedRoute,
     private location: Location,
     private foodService: FoodService,
-    private router: Router
   ) { }
 
   ngOnInit() {
-    this.route.params.forEach((urlParameters) => {
-     this.foodId = urlParameters['id'];
+    this.route.params.forEach((dataLastEmittedFromObserver) => {
+     this.foodToDisplay = new Food(dataLastEmittedFromObserver.name,
+                                  dataLastEmittedFromObserver. description,
+                                  dataLastEmittedFromObserver.calories);
    });
-   this.foodToDisplay = this.foodService.getFoodById(this.foodId);
   }
-  editFood() {
-   this.editingFood = this.foodToDisplay;
-   console.log(this.foodToDisplay);
-  }
-
-   finishedEditing() {
-     this.editingFood = null;
-   }
-
 }
